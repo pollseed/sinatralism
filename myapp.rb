@@ -21,15 +21,15 @@ class Stream
 end
 
 before do
-  cache_control :public, :max_age => 0
+  #cache_control :public, :max_age => 0
 end
 
 get '/' do
-  Stream.new.default('hoge', "hogehogeTODO")
+  Stream.new.default('hoge', "hogehogeTOD0O")
 end
 
 
-get '/:title' do
+get '/title/:title' do
   Stream.new.default(params['title'], "hogehogeTODO")
 end
 
